@@ -1,6 +1,3 @@
-const createUniverse = (cols, rows) =>
-	new Array(cols).fill(0).map(() => new Array(rows).fill(0));
-
 class Universe {
 	constructor(cols, rows, cellSize) {
 		this.cols = cols;
@@ -73,12 +70,23 @@ class Universe {
 let universe;
 
 function setup() {
-	let cellSize = 10;
-	// let cols = Math.floor((windowWidth * 0.5) / cellSize);
+	let cols = 0;
+	let rows = 0;
+	let cellSize = 8;
 
-	// let rows = Math.floor(cols * 0.6);
-	let cols = 80;
-	let rows = 60;
+	if (windowWidth < 600) {
+		cols = Math.floor((windowWidth * 0.95) / cellSize);
+		rows = Math.floor(cols * 0.8);
+		cellSize = 8;
+	} else if (windowWidth < 1000) {
+		cols = 70;
+		rows = 50;
+		cellSize = 10;
+	} else {
+		cols = 100;
+		rows = 70;
+		cellSize = 10;
+	}
 
 	createCanvas(
 		cols * cellSize,
@@ -87,13 +95,15 @@ function setup() {
 		document.getElementById("my-canvas")
 	);
 
+	console.log(cols, rows, cellSize);
+
 	universe = new Universe(cols, rows, cellSize);
 
 	universe.seedLife();
 }
 
 function draw() {
-	frameRate(60);
+	frameRate(30);
 	background(220);
 	universe.drawCells();
 	universe.generateNextGeneration();

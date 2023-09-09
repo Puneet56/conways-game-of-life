@@ -1,22 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body></body>
+</html>
+
 <html>
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<meta charset="UTF-8" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+		<link rel="stylesheet" href="output.css" />
 		<script
 			language="javascript"
 			type="text/javascript"
 			src="conway.js"
 		></script>
-		<link rel="stylesheet" href="output.css" />
 	</head>
 	<body
 		class="w-full flex flex-col items-center justify-start dark bg-slate-800 text-slate-200"
 	>
 		<container
-			class="max-w-[800px] my-8 mx-auto prose prose-slate prose-xl prose-h1:font-medium dark:prose-invert"
+			class="max-w-[95vw] md:max-w-[700px] lg:max-w-[1000px] my-8 mx-auto prose prose-slate md:prose-2xl prose-h1:font-medium dark:prose-invert"
 		>
 			<h1>Conway's game of life</h1>
-			<canvas id="my-canvas">Canvas</canvas>
+			<canvas class="mx-auto" id="my-canvas">Canvas</canvas>
 			<span class="italic">*Click on the animation to seed life again.</span>
 			<p>
 				This sketch is made using
@@ -28,7 +41,46 @@
 				>
 					p5.js web editor
 				</a>
-				or on my <a class="https://github.com"> github </a>
+				or on my
+				<a
+					href="https://github.com/Puneet56/conways-game-of-life"
+					target="_blank"
+					>Github</a
+				>
+			</p>
+
+			<p>
+				Have you ever stumbled upon a YouTube channel that completely
+				transformed your perspective on a subject? For me, that transformative
+				moment occurred when I discovered "The Coding Train." This channel,
+				hosted by Daniel Shiffman, is a treasure trove of coding tutorials and
+				creative coding challenges and they ignited my passion for programming,
+				also led me to explore more fascinating projects.
+			</p>
+			<p>
+				His videos primarily focused on p5.js, a JavaScript library aimed at
+				making coding accessible and fun for creative individuals. I started
+				with his "Introduction to p5.js" series, which provided a solid
+				foundation for understanding the library's core concepts. Daniel's
+				explanations were clear, and his coding challenges were not only
+				educational but also incredibly entertaining.
+			</p>
+			<p>
+				Eventually I moved on to learn web development, got a full time job
+				which is much more exciting than my previous job as a mechanical
+				engineering.
+			</p>
+			<p>
+				Recently, I came accross a vidoe by ThePrimeagen on youtube, where he
+				was creating the
+				<a
+					href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+					target="_blank"
+					>Conway's game of life (Wikipedia)</a
+				>
+				using HTMX. The coding train also had a video on it and I decided to
+				create that using p5.js. The animation running about is the canvas
+				element of HTML, which is being drawn by p5.js.
 			</p>
 		</container>
 	</body>
